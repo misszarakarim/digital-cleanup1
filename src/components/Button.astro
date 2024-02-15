@@ -1,5 +1,25 @@
 ---
+const { variant= "primary", size = "medium" } = Astro.props;
+
+const knap ="border-black border-2 p-4 rounded-full font-bold"
+
+const variantClasses = {
+    "primary": "bg-emerald-300 hover:bg-emerald-500",
+    "secondary": "bg-yellow-500 hover:bg-yellow-700"
+};
+
+const sizeClasses = {
+    "big": "text-4xl",
+    "medium": "text-2xl",
+    "small": "text-1xl"
+};
 ---
+
+<div class="">
+    <button class:list= {[knap, variantClasses[variant], sizeClasses[size]]} >Køb nu!</button>
+</div>
+
+<!-- 
 <div>
     <button><slot /></button>
-</div>
+</div> -->
