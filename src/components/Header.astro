@@ -1,5 +1,31 @@
 ---
 ---
-<div>
-Header
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-violet-400 mb-5" >
+<div id="navbar" class="flex flex-row justify-between">
+<div id="logo" class="">
+<a href="#link1">Site logo</a>
+</div>
+
+<nav id="desktopmenu" class="hidden lg:block">
+   <ul class="flex flex-row gap-4">
+      <li class=""><a href="#link1">Top</a></li>
+      <li class=""><a href="#link2">Bogen</a></li>
+      <li class=""><a href="#link3">Billeder</a></li>
+      <li class=""><a href="#link4">Bestil</a></li>
+   </ul>
+</nav>
+
+<button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
+
+</div>
+<nav id="mobilmenu" class="flex flex-col content-center pt-4" 
+x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul >
+        <li class="text-center py-2 border-y-2"><a href="#link1">Top</a></li>
+        <li class="text-center py-2 border-b-2"><a href="#link2">Bogen</a></li>
+        <li class="text-center py-2 border-b-2"><a href="#link3">Billeder</a></li>
+        <li class="text-center py-2 border-b-2"><a href="#link4">Bestilt</a></li>   
+    </ul>
+</nav>
+
 </div>
