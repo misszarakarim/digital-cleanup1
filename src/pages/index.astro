@@ -1,71 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Section1 from '../components/Section1.astro';
+import Section2 from '../components/Section2.astro';
+
 ---
 <MainLayout title="Titel">
 
-	<section></section>
+	<!-- <section class="">
+      <div class="text-2xl ">
+        <h1>Digital</h1>
+        <h1>Cleanup</h1>
+        <h1>Day</h1>
+      </div>
+    </section> -->
 
-	<section></section>
-
-	<section></section>
-
-<!-- FORUM -->
-<section>
-
-<div class="mx-44">
-		<h1 class="font-bold text-4xl mb-10 text-center">Køb bogen!</h1>
-
-		  <form action="" class="mx-80" >
-
-        <div class="grid grid-rows-2">
-            <label for="antalboeger">Antal:</label>
-            <input type="number" name="antalboeger" id="antalboeger">
-        </div>
-		
-        <div class="my-7">
-            <span>Levering:</span>
-            <input type="radio" name="levering" id="postnord">
-            <label for="postnord">Postnord</label>
-
-            <input type="radio" name="levering" id="afhent">
-            <label for="afhent">Afhent selv</label>
-        </div>
-
-        <div class="grid grid-rows-2 my-7">
-            <label for="fuldenavn">Fuldenavn:</label>
-            <input type="text" name="fuldenavn" id="fuldenavn" placeholder="Anders Mikkelsen">
-        </div>
-
-        <div class="grid grid-rows-2 my-7">
-            <label for="adressenavn">Adresse:</label>
-            <input type="text" name="adressenavn" id="adressenavn" placeholder="Kastanevej 15">
-        </div>
-
-        <div class="grid grid-rows-2 my-7">
-            <label for="email">E-mail:</label>
-            <input type="text" name="email" id="email" placeholder="andersmikkelsen@gamil.com">
-        </div>
-
-        <div class="grid-cols-6 my-7 ">
-            <span>Postnummer og bynavn:</span>
-            <label for="postnummer"></label>
-            <input type="text" name="post" id="postnummer" placeholder="2730">
-            <input type="text" name="bynavn" id="by" placeholder="Herlev">
-        </div>
-
-        <div class="grid grid-rows-2 my-7">
-            <label for="telnummer">Telefon:</label>
-            <input type="tel" name="telnummer" id="telnummer" placeholder="62638465">
-        </div>
-
-        <div class=" my-7">
-			<input type="checkbox" name="check" id="check">
-            <label for="check">Ja tak til nyhedsbreve og tilbud</label>
-        </div>
-
-        <div class="flex justify-end">
-           	<Button variant="second" size="lille">Til betaling</Button>
-		</div>
+<Section1 />
+<Section2 />
 
 </MainLayout>
