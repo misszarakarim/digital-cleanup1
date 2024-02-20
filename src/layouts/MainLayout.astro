@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Background from "../components/Background.astro";
 import '../styles/tailwind.css';
 import 'animate.css';
 const { title } = Astro.props;
@@ -18,7 +19,7 @@ const { title } = Astro.props;
 		<header>
 			<Header></Header>
 		</header>
-		
+		<Background />
 		<main class="mx-3">
 			<slot />
 		</main>
