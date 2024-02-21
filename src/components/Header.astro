@@ -1,15 +1,14 @@
 ---
 ---
 
-<div class="absolute z-[101]">
-<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-violet-400 mb-5" >
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full my-5 px-10" >
 <div id="navbar" class="flex flex-row justify-between">
 <div id="logo" class="">
 <a href="#link1">Site logo</a>
 </div>
 
 <nav id="desktopmenu" class="hidden lg:block">
-   <ul class="flex flex-row gap-4">
+   <ul class="flex flex-row gap-4 space-x-10 font-jost text-[17px]">
       <li class=""><a href="#link1">Digital skrald</a></li>
       <li class=""><a href="#link2">Fakta</a></li>
       <li class=""><a href="#link3">Fjernelse af skrald</a></li>
@@ -17,17 +16,21 @@
    </ul>
 </nav>
 
-<button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">Menu</button>
+<button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
+<img class="w-5" src="/bm.png" alt="Menu">
+</button>
 
+</div>
 <nav id="mobilmenu" class="flex flex-col content-center pt-4" 
 x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul >
         <li class="text-center py-2 border-y-2"><a href="#link1">Digital skrald</a></li>
         <li class="text-center py-2 border-b-2"><a href="#link2">Fakta</a></li>
-        <li class="text-center py-2 border-b-2"><a href="#link3">Fjernelse af skrald</a></li>
+        <li class="text-center py-2 border-b-2"><a href="#link3">Fjernelse af skrald<</a></li>
         <li class="text-center py-2 border-b-2"><a href="#link4">Slettet</a></li>   
     </ul>
 </nav>
 
 </div>
-</div>
+
+
