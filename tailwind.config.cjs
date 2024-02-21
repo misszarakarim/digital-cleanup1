@@ -7,4 +7,16 @@ module.exports = {
         require('@tailwindcss/aspect-ratio'),
         require('@tailwindcss/container-queries'),
     ],
+    theme: {
+        extend: {
+            colors: {
+                'blaa': '#B5D7FF',
+                'groen': '#9ED2DD',
+                'textblaa': '#3B2983',
+            },
+            fontFamily: {
+                'jost': ['Jost'],
+            }
+        }
+    }
   };
