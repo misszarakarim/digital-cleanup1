@@ -1,5 +1,14 @@
 ---
-const { header, text} = Astro.props;
+const { variant= "primary", header, text} = Astro.props;
+
+const section = "rounded-[15px] p-8"
+
+const variantClasses = {
+"primary": "bg-blaa",
+"secondary": "bg-groen"
+
+};
+
 ---
 
 
@@ -7,7 +16,7 @@ const { header, text} = Astro.props;
 
 
 
-  <div class="border-[#B5D7FF] bg-[#B5D7FF] rounded-[15px] p-8">
+  <div class:list= {[section, variantClasses[variant]]}>
     <h4 class="font-bold mb-2.5">{header}</h4>
     <p>{text}</p>
     <img src="" alt="">
