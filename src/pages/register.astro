@@ -1,65 +1,117 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import LabelCards from '../components/LabelCards.astro';
 ---
 <MainLayout title="Titel">
 
 <!-- FORUM -->
-<section>
 
-<div class="mx-44">
-		<h1 class="font-bold text-4xl mb-10 text-center">Køb bogen!</h1>
+    <section class=" bg-[#9ED2DD] max-w-lg mx-auto ">
 
-		  <form action="" class="mx-80" >
+		<h1 class="font-bold text-indigo-900 text-1xl text-center lg:text-2xl">REGISTRER DIN DIGITALE OPRYDNING</h1>
 
-        <div class="grid grid-rows-2">
-            <label for="antalboeger">Antal:</label>
-            <input type="number" name="antalboeger" id="antalboeger">
-        </div>
-		
-        <div class="my-7">
-            <span>Levering:</span>
-            <input type="radio" name="levering" id="postnord">
-            <label for="postnord">Postnord</label>
+        <form action="" class="p-5" >
 
-            <input type="radio" name="levering" id="afhent">
-            <label for="afhent">Afhent selv</label>
+          <div class="grid grid-rows-1 my-7 form-group mt-4">
+            <label for="navn" class="block text-indigo-900 font-bold mb-2">Navn:</label>
+            <div class="relative">
+                <input type="text" id="navn" name="navn" placeholder="Navn" class="w-full py-2 px-2 border-2 border-indigo-900 rounded-md">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <img src="/public/user_icon.svg" alt="Ikon" class="w-6 h-6 ml-2">
+                </span>
+            </div>
         </div>
 
-        <div class="grid grid-rows-2 my-7">
-            <label for="fuldenavn">Fuldenavn:</label>
-            <input type="text" name="fuldenavn" id="fuldenavn" placeholder="Anders Mikkelsen">
+        <div class="grid grid-rows-1 my-7 form-group mt-4">
+            <label for="efternavn" class="block text-indigo-900 font-bold mb-2">Efternavn:</label>
+            <div class="relative">
+                <input type="text" id="efternavn" name="efternavn" placeholder="Efternavn" class="w-full py-2 px-2 border-2 border-indigo-900 rounded-md">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <img src="/public/user_icon.svg" alt="Ikon" class="w-6 h-6 ml-2">
+                </span>
+            </div>
         </div>
 
-        <div class="grid grid-rows-2 my-7">
-            <label for="adressenavn">Adresse:</label>
-            <input type="text" name="adressenavn" id="adressenavn" placeholder="Kastanevej 15">
+        <div class="grid grid-rows-1 my-7 form-group mt-4">
+            <label for="email" class="block text-indigo-900 font-bold mb-2">E-mail:</label>
+            <div class="relative">
+                <input type="text" id="email" name="email" placeholder="E-mail" class="w-full py-2 px-2 border-2 border-indigo-900 rounded-md">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <img src="/public/user_icon.svg" alt="Ikon" class="w-6 h-6 ml-2">
+                </span>
+            </div>
         </div>
 
-        <div class="grid grid-rows-2 my-7">
-            <label for="email">E-mail:</label>
-            <input type="text" name="email" id="email" placeholder="andersmikkelsen@gamil.com">
+        <div class="grid grid-rows-1 my-7 form-group mt-4">
+            <label for="land" class="block text-indigo-900 font-bold mb-2">Land:</label>
+            <div class="relative">
+                <input list="countries" id="country" name="country" placeholder="Vælg land" class="w-full py-2 px-2 border-2 border-indigo-900 rounded-md">
+                <datalist id="countries">
+                        <option value="Belgien">
+                        <option value="Danmark">
+                        <option value="Tyskland">
+                        <option value="Norge">
+                        <option value="USA (Amerikas Forenede Stater)">
+                        
+                </datalist>
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <img src="/public/globe.svg" alt="Ikon" class="w-6 h-6 ml-2">
+                </span>
+            </div>
         </div>
 
-        <div class="grid-cols-6 my-7 ">
-            <span>Postnummer og bynavn:</span>
-            <label for="postnummer"></label>
-            <input type="text" name="post" id="postnummer" placeholder="2730">
-            <input type="text" name="bynavn" id="by" placeholder="Herlev">
+        <div class="grid grid-rows-1 my-7 form-group mt-4">
+            <label for="deltager" class="block text-indigo-900 font-bold mb-2">Antal deltagere:</label>
+            <div class="relative">
+                <input type="number" id="deltager" name="deltager" placeholder="0" class="w-full py-2 px-2 border-2 border-indigo-900 rounded-md">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                   
+                </span>
+            </div>
         </div>
 
-        <div class="grid grid-rows-2 my-7">
-            <label for="telnummer">Telefon:</label>
-            <input type="tel" name="telnummer" id="telnummer" placeholder="62638465">
+        <div class="grid grid-rows-1 my-7 form-group mt-4">
+            <label for="slettet" class="block text-indigo-900 font-bold mb-2">Mængde slettet (i GB):</label>
+            <div class="relative">
+                <input type="number" id="slettet" name="slettet" placeholder="0" class="w-full py-2 px-2 border-2 border-indigo-900 rounded-md">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                   
+                </span>
+            </div>
+        </div>
+        <p class="flex justify-center text-indigo-900 text-[10px] lg:text-[13px] ">Samlet slettet 8.511.463 gigabyte og sparet 2.127.865 kilogram CO₂ om året.</p>
+
+        <div class="flex items-center text-indigo-900 mt-7 font-semibold text-[10px] lg:text-[13px] ">
+            <input type="checkbox" id="checkbox" name="checkbox" class="mr-2">
+            <label for="checkbox">Jeg accepterer Let's Do It, World's vilkår og betingelser.</label>
         </div>
 
-        <div class=" my-7">
-			<input type="checkbox" name="check" id="check">
-            <label for="check">Ja tak til nyhedsbreve og tilbud</label>
+        <div class="flex items-center text-indigo-900 mt-7 font-semibold text-[10px] lg:text-[13px]">
+            <input type="checkbox" id="checkbox" name="checkbox" class="mr-2">
+            <label for="checkbox">Jeg vil gerne tilmelde mig nyhedsbrevet fra World Cleanup Day.</label>
         </div>
-
-        <div class="flex justify-end">
+        
+        
+        <!-- <div class="flex justify-center mt-10">
            	<Button variant="second" size="lille">Til betaling</Button>
-		</div>
+		</div> -->
+
+        <div class="text-center mt-10">
+            <Button />
+         </div>
+         <div class="text-center mt-5">
+       </div>
+        
+    </form>
+    
+   
+    
+    </section>
+
+    
+
 
 </MainLayout>
+
+
