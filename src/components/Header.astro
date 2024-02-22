@@ -1,9 +1,9 @@
 ---
 ---
 
-<div x-data="{ showmenu: false }" class="p-6 fixed lg:static w-full mb-5 px-10 bg-back z-50" >
+<div x-data="{ showmenu: false }" class="p-6 fixed lg:static w-full mb-5 px-10 bg-back z-[150]" >
 <div id="navbar" class="flex flex-row justify-between">
-<div id="logo" class=" md:w-52 md:h-52">
+<div id="logo" class=" md:w-52">
 <a href=""><img class="hidden md:block" src="/logo2.png" alt="Logo"></a>
 </div>
 
@@ -21,7 +21,7 @@
 </button>
 
 </div>
-<nav id="mobilmenu" class="flex flex-col content-center bg-groen" 
+<nav id="mobilmenu" class="flex flex-col content-center bg-groen mt-4" 
 x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul class="font-bold">
         <li class="text-center py-2 border-y-2"><a href="#link1">Digital skrald</a></li>
