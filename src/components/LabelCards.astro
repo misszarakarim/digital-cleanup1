@@ -1,16 +1,4 @@
 ---
-const { image, text1, text2, text3 } = Astro.props;
-const {beskrivelse, } = Astro.props;
+const {} = Astro.props;
 ---
 
-<form action="" class="mx-80" >
-
-    <div class="grid grid-rows-1 my-7 form-group mt-4">
-      <label for="navn" class="block text-indigo-900 font-bold mb-2">{beskrivelse}</label>
-      <div class="relative">
-          <input type="text" id="navn" name="navn" placeholder="" class="w-full py-2 px-2 border-2 border-indigo-900 rounded-md">
-          <span class="absolute inset-y-0 right-0 flex items-center pr-3">
-              <img src="/public/user_icon.svg" alt="Ikon" class="w-6 h-6 ml-2">
-          </span>
-      </div>
-  </div>
