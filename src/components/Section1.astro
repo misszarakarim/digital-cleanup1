@@ -1,5 +1,5 @@
       
-      <article class=" pt-32">
+      <article class=" pt-32 jsani">
 
       <div class="flex flex-row items-center mb-5">
 
@@ -34,5 +34,18 @@
       </div>
 
     </article>
+
+
+    <script>
+import { inView } from "motion";
+
+const jsani = document.querySelector(".jsani");
+
+inView(jsani, () => {
+  jsani.classList.add("animate__animated", "animate__fadeInUp");
+});
+
+
+    </script>
 
       
