@@ -25,7 +25,7 @@ import Button from '../components/Button.astro';
 <div class="text-textblaa">
   <h1 class="mt-20 font-bold text-3xl text-center mb-10">Hvordan fjerner man digital skrald?</h1>
   
-<div class=" space-y-7">
+<div class=" space-y-7 jsani3">
 <Section3 header = "Trin et, ryd op på din smartphone:" text = "Slet apps, du ikke har brugt i et stykke tid eller kun har brugt en gang. Vær ærlig og dristig! Disse glemte apps forbruger stadig energi og data til opdateringer, selv når de ikke er i brug. Slet gamle brugerkonti og data, som du ikke har tilgået i årevis. Dette kan øge hastigheden på din telefon og forlænge batteriets levetid. Gennemgå og slet unødvendige eller duplikerede fotos og videoer for at frigøre værdifuld lagerplads." >
 
   <img width="300px" height="300px" src="../../public/Info4.svg" alt="" class="hidden md:block">
@@ -45,11 +45,29 @@ import Button from '../components/Button.astro';
     <img width="300px" height="300px" src="../../public/Info7.svg" alt="" class="hidden md:block">
 
     </Section3>
+    </div>
 <Section4 />
 <div class="hidden md:block text-center">
        <Button />
     </div>
 </MainLayout>
+
+
+
+
+<script>
+  import { inView } from "motion";
+  
+  const jsani3 = document.querySelector(".jsani3");
+  
+  inView(jsani3, () => {
+    jsani3.classList.add("animate__animated", "animate__fadeInUp");
+  });
+  
+  
+      </script>
+
+ 
 
 
 
