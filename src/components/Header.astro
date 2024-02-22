@@ -1,14 +1,14 @@
 ---
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full mb-5 px-10 bg-back" >
+<div x-data="{ showmenu: false }" class="p-6 fixed lg:static w-full mb-5 px-10 bg-back z-50" >
 <div id="navbar" class="flex flex-row justify-between">
-<div id="logo" class="">
-<a href="#link1">Site logo</a>
+<div id="logo" class=" md:w-52 md:h-52">
+<a href=""><img class="hidden md:block" src="/logo2.png" alt="Logo"></a>
 </div>
 
 <nav id="desktopmenu" class="hidden lg:block">
-   <ul class="flex flex-row gap-4 space-x-10 font-jost text-[17px]">
+   <ul class="flex flex-row gap-4 space-x-10 font-jost text-[17px] md:mt-5">
       <li class=""><a href="#link1">Digital skrald</a></li>
       <li class=""><a href="#link2">Fakta</a></li>
       <li class=""><a href="#link3">Fjernelse af skrald</a></li>
@@ -17,13 +17,13 @@
 </nav>
 
 <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu">
-<img class="w-5" src="/bm.png" alt="Menu">
+<img class="w-5 " src="/bm.png" alt="Menu">
 </button>
 
 </div>
-<nav id="mobilmenu" class="flex flex-col content-center bg-groen mt-5" 
+<nav id="mobilmenu" class="flex flex-col content-center bg-groen" 
 x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-    <ul class="font-bold" >
+    <ul class="font-bold">
         <li class="text-center py-2 border-y-2"><a href="#link1">Digital skrald</a></li>
         <li class="text-center py-2 border-b-2"><a href="#link2">Fakta</a></li>
         <li class="text-center py-2 border-b-2"><a href="#link3">Fjernelse af skrald</a></li>

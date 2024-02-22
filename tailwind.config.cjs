@@ -9,6 +9,7 @@ module.exports = {
         groen: "#9ED2DD",
         textblaa: "#3B2983",
         back: "#F5E9E2",
+        footer: "#3B2983",
       },
       fontFamily: {
         jost: ["Jost"],
