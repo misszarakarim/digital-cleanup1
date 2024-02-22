@@ -1,39 +1,22 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
 import Section1 from '../components/Section1.astro';
 import Section2 from '../components/Section2.astro';
 import Section3 from '../components/Section3.astro';
 import Section4 from '../components/Section4.astro';
 import Background from "../components/Background.astro";
+import Button from '../components/Button.astro';
+
 
 ---
 <MainLayout title="Titel">
 
-	<section class="pt-20">
-    <div class="mx-20">
-      <div class="text-4xl font-bold pb-6 text-center flex flex-col space-y-2 ">
-        <h1 class="place-self-start">Digital</h1>
-        <h1 class="place-self-center">Cleanup</h1>
-        <h1 class="place-self-end mr-4">Day</h1>
-      </div>
-    </div>
+	
 
   <Background></Background>
-    <div class="text-center mt-5">
-       <Button />
-    </div>
-    <div class="text-center mt-5">
-  </div>
   
-
-      <div class="text-center mt-8">
-        <p class="mb-2">Hjælp med oprydning!</p>
-        <p>Tilmeld dig før den 16. marts til den store oprydning </p>
-      </div>
-
-      <div class="bg-[#9ED2DD] h-7 mt-12"></div>
-    </section>
+  <div class="bg-[#9ED2DD] h-7 -mt-20 lg:-mt-36 "></div>
+   
 
 <Section1 />
 <Section2 />
@@ -43,13 +26,25 @@ import Background from "../components/Background.astro";
   <h1 class="mt-20 font-bold text-3xl text-center mb-10">Hvordan fjerner man digital skrald?</h1>
   
 <div class=" space-y-7">
-<Section3 header = "Trin et, ryd op på din smartphone:" text = "Slet apps, du ikke har brugt i et stykke tid eller kun har brugt en gang. Vær ærlig og dristig! Disse glemte apps forbruger stadig energi og data til opdateringer, selv når de ikke er i brug. Slet gamle brugerkonti og data, som du ikke har tilgået i årevis. Dette kan øge hastigheden på din telefon og forlænge batteriets levetid. Gennemgå og slet unødvendige eller duplikerede fotos og videoer for at frigøre værdifuld lagerplads." />
+<Section3 header = "Trin et, ryd op på din smartphone:" text = "Slet apps, du ikke har brugt i et stykke tid eller kun har brugt en gang. Vær ærlig og dristig! Disse glemte apps forbruger stadig energi og data til opdateringer, selv når de ikke er i brug. Slet gamle brugerkonti og data, som du ikke har tilgået i årevis. Dette kan øge hastigheden på din telefon og forlænge batteriets levetid. Gennemgå og slet unødvendige eller duplikerede fotos og videoer for at frigøre værdifuld lagerplads." >
 
-<Section3 variant="secondary" header = "Trin to, ryd op på din pc og bærbar:" text = "Ryd op på din pc og slet filer, der er duplikater, eller som er blevet ubrugelige. Sorter dine fotos, slet duplikater og de slørede. Gennemgå videoerne og slet sete eller unødvendige filer. Arkiver de vigtige filer. Vær forberedt på at finde virkelig fantastiske ting på din computer!" />
+  <img width="300px" height="300px" src="../../public/Info4.svg" alt="" class="hidden md:block">
+ 
+  </Section3>
 
+<Section3 variant="secondary" header = "Trin to, ryd op på din pc og bærbar:" text = "Ryd op på din pc og slet filer, der er duplikater, eller som er blevet ubrugelige. Sorter dine fotos, slet duplikater og de slørede. Gennemgå videoerne og slet sete eller unødvendige filer. Arkiver de vigtige filer. Vær forberedt på at finde virkelig fantastiske ting på din computer!">
+  <img width="300px" height="300px" src="../../public/Info5.svg" alt="" class="hidden md:block">
 
-<Section3 header = "Trin tre, ryd op i din mailboks:" text = "Filtrer e-mails efter de ældste og arkiver dem. AFBESTIL nyhedsbreve, du ikke læser. Vælg lange samtaler, vælg den nyeste og SLET alt andet. Søg efter fælles navne, adresser og ord for at gruppere lignende e-mails, så du kan håndtere dem i masse. Vær modig og klik på SLET-knappen." />
-<Section3 variant="secondary" header = "Trin fire, lav nye arrangementer:" text = "For at mindske din online miljøpåvirkning, overvej små ændringer: Brug chat i stedet for e-mails til korte samtaler, undgå unødvendige e-mails som 'ok' og 'tak', hold vigtige filer på én cloud-platform for at undgå duplikater, tænk over backup for at spare energi, skab mindre, men bedre indhold, backup kun det vigtigste, sluk for video under møder, sænk streamingkvaliteten og begræns tid på sociale medier og spil, og afmeld nyhedsbreve for at reducere rod. " />
+</Section3>
+<Section3 header = "Trin tre, ryd op i din mailboks:" text = "Filtrer e-mails efter de ældste og arkiver dem. AFBESTIL nyhedsbreve, du ikke læser. Vælg lange samtaler, vælg den nyeste og SLET alt andet. Søg efter fælles navne, adresser og ord for at gruppere lignende e-mails, så du kan håndtere dem i masse. Vær modig og klik på SLET-knappen.">
+  <img width="300px" height="300px" src="../../public/Info6.svg" alt="" class="hidden md:block">
+
+</Section3>
+
+  <Section3 variant="secondary" header = "Trin fire, lav nye arrangementer:" text = "For at mindske din online miljøpåvirkning, overvej små ændringer: Brug chat i stedet for e-mails til korte samtaler, undgå unødvendige e-mails som 'ok' og 'tak', hold vigtige filer på én cloud-platform for at undgå duplikater, tænk over backup for at spare energi, skab mindre, men bedre indhold, backup kun det vigtigste, sluk for video under møder, sænk streamingkvaliteten og begræns tid på sociale medier og spil, og afmeld nyhedsbreve for at reducere rod. ">
+    <img width="300px" height="300px" src="../../public/Info7.svg" alt="" class="hidden md:block">
+
+    </Section3>
 <Section4 />
 <div class="hidden md:block text-center">
        <Button />

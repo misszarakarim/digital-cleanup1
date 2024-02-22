@@ -1,7 +1,7 @@
 ---
-const { variant= "primary", header, text} = Astro.props;
+const { variant= "primary", header, text, img} = Astro.props;
 
-const section = "rounded-[15px] p-8"
+const section = "rounded-[15px] p-8 flex flex-cols md:mx-28"
 
 const variantClasses = {
 "primary": "bg-blaa",
@@ -15,13 +15,14 @@ const variantClasses = {
 
 
 
-
-  <div class:list= {[section, variantClasses[variant]]}>
+<div class:list= {[section, variantClasses[variant]]} >
+  <div class="md:pr-24">
     <h4 class="font-bold mb-2.5">{header}</h4>
-    <p>{text}</p>
-    <img src="" alt="">
-  </div>
+    <p>{text}</p>  </div>
 
+
+    <slot />
+  </div>
 </div>
 
-    </div>
+ 
