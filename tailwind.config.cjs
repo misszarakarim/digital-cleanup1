@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         jost: ["Jost"],
-        hepta: ["Hepta"],
+        hepta: ["Hepta Slab"],
       },
     },
   },
